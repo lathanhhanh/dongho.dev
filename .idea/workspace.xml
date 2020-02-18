@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3897c3f-81fe-4eef-9504-0f31bce577fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/image/noimage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/no-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/keyword/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/keyword/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/keyword/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/keyword/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/keyword/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/keyword/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app_master_admin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app_master_admin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +126,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages\home" />
+      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages" />
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -191,7 +182,7 @@
       <workItem from="1581868595781" duration="1114000" />
       <workItem from="1581911774602" duration="1194000" />
       <workItem from="1581918854384" duration="3038000" />
-      <workItem from="1582036505882" duration="2960000" />
+      <workItem from="1582036505882" duration="4589000" />
     </task>
     <servers />
   </component>
@@ -207,10 +198,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="746" y="68" width="620" height="627" key="#phpunit.xml/0.0.1366.728@0.0.1366.728" timestamp="1581774212889" />
-    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582038170932">
+    <state x="517" y="296" key="NewPhpFileDialog" timestamp="1582041248730">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582038170932" />
+    <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1582041248730" />
     <state x="186" y="10" key="SettingsEditor" timestamp="1581838862397">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
