@@ -6,9 +6,9 @@
             <div class="row">
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-left">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('admin.keyword.index') }}">Keyword</a></li>
-                        <li class="breadcrumb-item active">Create</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.product.index') }}">Sản phẩm</a></li>
+                        <li class="breadcrumb-item active">Cập nhật</li>
                     </ol>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                             <!-- form start -->
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="pro_name">Name (<span class="text-danger">*</span>)</label>
+                                    <label for="pro_name">Tên sản phẩm (<span class="text-danger">*</span>)</label>
                                     <input type="text" class="form-control {{ $errors->first('pro_name') ? 'is-invalid' : '' }}" value="{{ $product->pro_name }}" name="pro_name" placeholder="Name...">
                                     @if($errors->first('pro_name'))
                                         <span class="text-danger">{{ $errors->first('pro_name') }}</span>
@@ -124,8 +124,8 @@
                 </div>
                 <div class="col-ms-12 card p-3">
                     <div class="small-box-footer text-center">
-                        <a href="{{ route('admin.product.index') }}" class="btn btn-secondary"> <i class="fa fa-arrow-left"></i>  Back</a>
-                        <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i>  Save</button>
+                        <a href="{{ route('admin.product.index') }}" class="btn btn-secondary"> <i class="fa fa-arrow-left"></i>Quay lại</a>
+                        <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i>Cập nhật</button>
                     </div>
                 </div>
             </form>

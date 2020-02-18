@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-left">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Product</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Sản phẩm</li>
                     </ol>
                 </div>
             </div>
@@ -30,13 +30,13 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
+                        <th >Hình ảnh</th>
+                        <th>Tên sản phẩm</th>
                         <th>Giá</th>
-                        <th >Description</th>
                         <th>Hot</th>
-                        <th>Status</th>
-                        <th>Time</th>
-                        <th>Action</th>
+                        <th>Trạng thái</th>
+                        <th>Thời gian</th>
+                        <th>Hành động</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -44,9 +44,9 @@
                         @foreach($products as $product)
                         <tr>
                             <td>{{ $product->id }}</td>
+                            <td><img src="{{ pare_url_file($product->pro_avatar) }}" height="100px" width="100px"></td>
                             <td>{{ $product->pro_name }}</td>
                             <td>{{ $product->pro_price }}</td>
-                            <td><img src="{{ pare_url_file($product->pro_avatar) }}" height="100px" width="100px"></td>
                             <td>
                                 @if($product->pro_hot == 1)
                                     <a href="{{ route('admin.product.hot', $product->id) }}" class="badge badge-info">Hot</a>

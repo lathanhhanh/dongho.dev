@@ -205,7 +205,7 @@
                         <a href="{{ route('admin.category.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-th-list"></i>
                             <p>
-                                Category
+                                Danh mục
                                 <span class="right badge badge-danger">New</span>
                             </p>
                         </a>
@@ -213,19 +213,19 @@
                     <li class="nav-item">
                         <a href="{{ route('admin.keyword.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-key"></i>
-                            <p>Keyword</p>
+                            <p>Từ khoá</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('admin.product.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-shopping-bag"></i>
-                            <p>Product</p>
+                            <p>Sản phẩm</p>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('admin.product.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
-                            <p>User</p>
+                            <p>Người dùng</p>
                         </a>
                     </li>
                     <li class="nav-item has-treeview">

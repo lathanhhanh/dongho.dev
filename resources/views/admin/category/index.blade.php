@@ -6,8 +6,8 @@
             <div class="row">
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-left">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Category</li>
+                        <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Danh mục</li>
                     </ol>
                 </div>
             </div>
@@ -30,11 +30,11 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Name</th>
-                        <th>Avatar</th>
-                        <th>Status</th>
+                        <th>Hình ảnh</th>
+                        <th>Tên</th>
+                        <th>Trạng thái</th>
                         <th>Hot</th>
-                        <th>Action</th>
+                        <th>Hành động</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -46,9 +46,9 @@
                             <td><img src="ahihih" height="80px" width="80px"></td>
                             <td>
                                 @if($category->c_status == 1)
-                                    <a href="{{ route('admin.category.active', $category->id) }}" class="badge badge-info">Show</a>
+                                    <a href="{{ route('admin.category.active', $category->id) }}" class="badge badge-info">Hiển thị</a>
                                 @else
-                                    <a href="{{ route('admin.category.active', $category->id) }}" class="badge badge-secondary">Hide</a>
+                                    <a href="{{ route('admin.category.active', $category->id) }}" class="badge badge-secondary">Ẩn</a>
                                 @endif
                             </td>
                             <td>
@@ -59,8 +59,8 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('admin.category.update', $category->id) }}" class="btn btn-sm btn-success"> <i class="fa fa-pen"></i> Edit</a>
-                                <a href="{{ route('admin.category.delete', $category->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Delete</a>
+                                <a href="{{ route('admin.category.update', $category->id) }}" class="btn btn-sm btn-success"> <i class="fa fa-pen"></i>Cập nhật</a>
+                                <a href="{{ route('admin.category.delete', $category->id) }}" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Xoá</a>
                             </td>
                         </tr>
                         @endforeach
