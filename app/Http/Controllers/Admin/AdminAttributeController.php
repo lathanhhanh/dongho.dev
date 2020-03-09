@@ -37,4 +37,20 @@ class AdminAttributeController extends Controller
 
         return redirect()->route('admin.attribute.index');
     }
+    public function edit($id)
+    {
+        $attribute = Attribute::find($id);
+        return view('admin.attribute.update', compact('attribute'));
+    }
+
+    public function update(AdminRequestAttribute $request, $id)
+    {
+        $attribute = Attribute::find($id);
+        $data               = $request->except('_token');
+        $data['atb_slug']     = Str::slug($request->atb_name);
+        $data['updated_at'] = Carbon::now();
+
+        $attribute->update($data);
+        return redirect()->route('admin.attribute.index');
+    }
 }

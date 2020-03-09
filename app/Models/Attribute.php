@@ -16,7 +16,7 @@ class Attribute extends Model
         ],
         2 => [
             'name' => 'Năng lượng',
-            'class' => 'badge badge-default'
+            'class' => 'badge badge-secondary'
         ],
         3 => [
             'name' => 'Loại dây',
