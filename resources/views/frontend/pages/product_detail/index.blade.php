@@ -17,37 +17,13 @@
                         <div class="imgLarge">
                             <div class="wImage">
                                 <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/product/1818962627_DONG-HO-CHINH-HANG-18.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
+                                    <img data-lazy="{{ pare_url_file($product->pro_avatar) }}" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
                                 </a>
                             </div>
 
                             <div class="wImage">
                                 <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_big/288433531_DONG-HO-CHINH-HANG-17.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_big/1035045547_DONG-HO-CHINH-HANG-12.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_big/180278684_DONG-HO-CHINH-HANG-6.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_big/1093616773_DONG-HO-CHINH-HANG-5.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_big/901828726_DONG-HO-CHINH-HANG-1.jpg" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
+                                    <img data-lazy="{{ pare_url_file($product->pro_avatar) }}" class="lazyload" alt="Dang Quang" src="/view/Css/icon/thumnail.jpg"/>
                                 </a>
                             </div>
 
@@ -55,37 +31,13 @@
                         <div class="imgSmall">
                             <div class="wImage">
                                 <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/product/1818962627_DONG-HO-CHINH-HANG-18.jpg" class="owl-lazy" alt="Dang Quang"/>
+                                    <img data-lazy="{{ pare_url_file($product->pro_avatar) }}" class="owl-lazy" alt="Dang Quang"/>
                                 </a>
                             </div>
 
                             <div class="wImage">
                                 <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_small/288433531_DONG-HO-CHINH-HANG-17.jpg" class="owl-lazy" alt="Dang Quang"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_small/1035045547_DONG-HO-CHINH-HANG-12.jpg" class="owl-lazy" alt="Dang Quang"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_small/180278684_DONG-HO-CHINH-HANG-6.jpg" class="owl-lazy" alt="Dang Quang"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_small/1093616773_DONG-HO-CHINH-HANG-5.jpg" class="owl-lazy" alt="Dang Quang"/>
-                                </a>
-                            </div>
-
-                            <div class="wImage">
-                                <a href="javascript://" title="" class="image">
-                                    <img data-lazy="https://www.dangquangwatch.vn//upload/img_small/901828726_DONG-HO-CHINH-HANG-1.jpg" class="owl-lazy" alt="Dang Quang"/>
+                                    <img data-lazy="{{ pare_url_file($product->pro_avatar) }}" class="owl-lazy" alt="Dang Quang"/>
                                 </a>
                             </div>
 
@@ -93,15 +45,17 @@
                         <div class="cb"></div>
                     </div>
                     <div class="right">
-                        <h1 class="namePro">Đồng hồ Philippe Auguste PA5008H</h1>
+                        <h1 class="namePro">{{ $product->pro_name }}</h1>
                         <div class="flex">
                             <div class="rightl" style="margin-right: 20px;">
                                 <div class="prices">
-                                    <p>Giá niêm yết: <span class="value">13.473.000 đ</span></p>
+                                    <p>Giá niêm yết: <span class="value">{{ number_format($product->pro_price,0,",",".") }} đ</span></p>
                                     <p>
-
-                                        Giá bán: <span class="value priceNew">12.125.700 đ</span>
-                                        <span class="sale">-10%</span>
+                                        @php
+                                            $price = ((100 - $product->pro_sale) * $product->pro_price ) / 100;
+                                        @endphp
+                                        Giá bán: <span class="value priceNew">{{ number_format($price,0,',','.') }} đ</span>
+                                        <span class="sale">-{{ $product->pro_sale }}%</span>
 
                                     </p>
                                 </div>
