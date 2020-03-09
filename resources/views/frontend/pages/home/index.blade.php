@@ -57,103 +57,11 @@
                             </div>
                         </div>
                         <div class="right">
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/17873/Dong-ho-Aries-Gold-AG-L5038-G-W.html" title="Đồng hồ Aries Gold AG-L5038 G-W" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/313779583_ĐỒNG-HỒ-CHĨNH-HÃNG-3.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/17873/Dong-ho-Aries-Gold-AG-L5038-G-W.html" title="Đồng hồ Aries Gold AG-L5038 G-W" class="name"><h3>Đồng hồ Aries Gold AG-L5038 G-W</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">2.902.500 đ</p>
-                                <p class="priceSale">3.225.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/17830/Dong-ho-Philippe-Auguste-PA5004C-+-Diamond-D-DD6005B.html" title="Đồng hồ Philippe Auguste PA5004C + Diamond D DD6005B" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/1762452735_dong-ho-doi4.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/17830/Dong-ho-Philippe-Auguste-PA5004C-+-Diamond-D-DD6005B.html" title="Đồng hồ Philippe Auguste PA5004C + Diamond D DD6005B" class="name"><h3>Đồng hồ Philippe Auguste PA5004C + Diamond D DD6005B</h3></a>
-                                <p class="percent">-20%</p>
-                                <p class="price">12.591.200 đ</p>
-                                <p class="priceSale">15.739.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/17669/BUT-KY-PHILIPPE-AUGUSTE-BUTPA-910/BL.html" title="BÚT KÝ PHILIPPE AUGUSTE BUTPA-910/BL" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/463369489_but-ky-cao-cap10.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/17669/BUT-KY-PHILIPPE-AUGUSTE-BUTPA-910/BL.html" title="BÚT KÝ PHILIPPE AUGUSTE BUTPA-910/BL" class="name"><h3>BÚT KÝ PHILIPPE AUGUSTE BUTPA-910/BL</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">495.000 đ</p>
-                                <p class="priceSale">550.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/17624/Dong-ho-Diamond-D-DD6016D.html" title="Đồng hồ Diamond D DD6016D" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/614010615_DONG-HO-CHINH-HANG-11.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/17624/Dong-ho-Diamond-D-DD6016D.html" title="Đồng hồ Diamond D DD6016D" class="name"><h3>Đồng hồ Diamond D DD6016D</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">5.536.800 đ</p>
-                                <p class="priceSale">6.152.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/16384/Kinh-RAYBAN-RB-4278-6282/71(51IT).html" title="Kính RAYBAN RB-4278-6282/71(51IT)" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/2091709855_kính-rayban308.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/16384/Kinh-RAYBAN-RB-4278-6282/71(51IT).html" title="Kính RAYBAN RB-4278-6282/71(51IT)" class="name"><h3>Kính RAYBAN RB-4278-6282/71(51IT)</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">4.725.000 đ</p>
-                                <p class="priceSale">5.250.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/15958/Dong-ho-QQ-QQ-S278J102Y-+-QQ-S279J102Y.html" title="Đồng hồ Q&Q QQ-S278J102Y + QQ-S279J102Y" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/505271425_QQ đôi.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/15958/Dong-ho-QQ-QQ-S278J102Y-+-QQ-S279J102Y.html" title="Đồng hồ Q&Q QQ-S278J102Y + QQ-S279J102Y" class="name"><h3>Đồng hồ Q&Q QQ-S278J102Y + QQ-S279J102Y</h3></a>
-                                <p class="percent">-20%</p>
-                                <p class="price">2.502.400 đ</p>
-                                <p class="priceSale">3.128.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/15001/Dong-ho-Aries-Gold-AG-L5033Z-RG-BK.html" title="Đồng hồ Aries Gold AG-L5033Z RG-BK" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/582730192_đồng-hồ-nữ-thời-trang5.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/15001/Dong-ho-Aries-Gold-AG-L5033Z-RG-BK.html" title="Đồng hồ Aries Gold AG-L5033Z RG-BK" class="name"><h3>Đồng hồ Aries Gold AG-L5033Z RG-BK</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">3.577.500 đ</p>
-                                <p class="priceSale">3.975.000 đ</p>
-                            </div>
-
-                            <div class="itemPro">
-                                <div class="wImage">
-                                    <a href="/sp/14726/Dong-ho-Atlantic-Swiss-AT-29037.45.21L.html" title="Đồng hồ Atlantic Swiss AT-29037.45.21L" class="image">
-                                        <img data-src="https://www.dangquangwatch.vn//upload/product_small/1867397475_dong-ho-chinh-hang-1.jpg" alt="" src="/view/Css/icon/thumnail.jpg" class="lazyload"/>
-                                    </a>
-                                </div>
-                                <a href="/sp/14726/Dong-ho-Atlantic-Swiss-AT-29037.45.21L.html" title="Đồng hồ Atlantic Swiss AT-29037.45.21L" class="name"><h3>Đồng hồ Atlantic Swiss AT-29037.45.21L</h3></a>
-                                <p class="percent">-10%</p>
-                                <p class="price">7.722.000 đ</p>
-                                <p class="priceSale">8.580.000 đ</p>
-                            </div>
-
+                            @if(isset($productsNew))
+                                @foreach($productsNew as $new)
+                                    @include('frontend.components.product_item',['product'=> $new])
+                                @endforeach
+                            @endif
                         </div>
                     </div>
                     <div class="bot" id="proNewst2">
