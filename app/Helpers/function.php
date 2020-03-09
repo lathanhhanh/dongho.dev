@@ -50,18 +50,39 @@ if (!function_exists('upload_image'))
         return $data;
     }
 }
-if (!function_exists('pare_url_file')) {
-    function pare_url_file($image,$folder = '')
+    if (!function_exists('pare_url_file'))
     {
-        if (!$image)
+        function pare_url_file($image,$folder = '')
         {
-            return'/images/no-image.jpg';
-        }
-        $explode = explode('__', $image);
+            if (!$image)
+            {
+                return'/images/no-image.jpg';
+            }
+            $explode = explode('__', $image);
 
-        if (isset($explode[0])) {
-            $time = str_replace('_', '/', $explode[0]);
-            return '/uploads'.$folder.'/' . date('Y/m/d', strtotime($time)) . '/' . $image;
+            if (isset($explode[0])) {
+                $time = str_replace('_', '/', $explode[0]);
+                return '/uploads'.$folder.'/' . date('Y/m/d', strtotime($time)) . '/' . $image;
+            }
         }
     }
-}
+
+    if(!function_exists('device_agent'))
+    {
+        function device_agent()
+        {
+            $agent = new Jenssegers\Agent\Agent();
+            if($agent->isMobile())
+            {
+                return 'mobile';
+            }
+            else if($agent->isDesktop())
+            {
+                return 'desktop';
+            }
+            else if($agent->isTablet())
+            {
+                return 'tablet';
+            }
+        }
+    }
