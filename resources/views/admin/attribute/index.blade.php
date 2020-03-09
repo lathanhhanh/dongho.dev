@@ -43,8 +43,12 @@
                             <tr>
                                 <td>{{ $atb->id }}</td>
                                 <td>{{ $atb->atb_name }}</td>
-                                <td>{{ $atb->atb_type }}</td>
-                                <td>{{ $atb->atb_category_id }}</td>
+                                <td>
+                                    <span class="{{ $atb->getType($atb->atb_type)['class'] }}">{{ $atb->getType($atb->atb_type)['name'] }}</span>
+                                </td>
+                                <td>
+                                    <span class="badge badge-info">{{ $atb->category->c_name ?? "[N/A]" }}</span>
+                                </td>
                                 <td>{{ $atb->created_at }}</td>
                                 <td>
                                     <a href="{{ route('admin.attribute.update', $atb->id) }}" class="btn btn-sm btn-success"> <i class="fa fa-pen"></i>Cập nhật</a>
