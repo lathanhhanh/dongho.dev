@@ -217,6 +217,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ route('admin.attribute.index') }}" class="nav-link">
+                            <i class="nav-icon fas fa-key"></i>
+                            <p>Attribute</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="{{ route('admin.product.index') }}" class="nav-link">
                             <i class="nav-icon fas fa-shopping-bag"></i>
                             <p>Sản phẩm</p>
