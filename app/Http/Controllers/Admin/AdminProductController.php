@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\AdminRequestProduct;
+use App\Models\Attribute;
 use App\Models\Category;
 use App\Models\Product;
 use Carbon\Carbon;
@@ -24,12 +25,14 @@ class AdminProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.product.create', compact('categories'));
+        $attributes = Attribute::orderByDesc('atb_type')->get();
+        $attributeOld = [];
+        return view('admin.product.create', compact('categories', 'attributes', $attributeOld));
     }
 
     public function store(AdminRequestProduct $request)
     {
-        $data = $request->except('_token');
+        $data = $request->except('_token','pro_avatar', 'attribute');
         $data['pro_slug'] = Str::slug($request->pro_name);
         $data['created_at'] = Carbon::now();
         $data['pro_active'] = 1;
@@ -41,6 +44,10 @@ class AdminProductController extends Controller
         }
 
         $id = Product::insertGetId($data);
+
+        if($id){
+            $this->syncAttributes($request->attribute, $id);
+        }
 
         return redirect()->route('admin.product.index');
     }
@@ -65,28 +72,41 @@ class AdminProductController extends Controller
     {
         $product = Product::find($id);
         $categories = Category::all();
+        $attributes = Attribute::orderByDesc('atb_type')->get();
+
+        $attributeOld = \DB::table('products_attributes')
+            ->where('pa_product_id', $id)
+            ->pluck('pa_attribute_id')
+            ->toArray();
+
+        if(!$attributeOld) $attributeOld = [];
 
         $viewData = [
-          'product' => $product,
-          'categories' => $categories
+            'product' => $product,
+            'categories' => $categories,
+            'attributes' => $attributes,
+            'attributeOld' => $attributeOld
         ];
+
         return view('admin.product.update', $viewData);
     }
 
     public function update(AdminRequestProduct $request, $id)
     {
         $product = Product::find($id);
-        $data = $request->except('_token');
+        $data = $request->except('_token', 'pro_avatar', 'attribute');
         $data['pro_slug'] = Str::slug($request->pro_name);
         $data['updated_at'] = Carbon::now();
-
         if ($request->pro_avatar) {
             $image = upload_image('pro_avatar');
             if ($image['code'] == 1)
                 $data['pro_avatar'] = $image['name'];
         }
 
-        $product->update($data);
+        $update  = $product->update($data);
+        if($update){
+            $this->syncAttributes($request->attribute, $id);
+        }
 
         return redirect()->route('admin.product.index');
     }
@@ -97,5 +117,22 @@ class AdminProductController extends Controller
         if($product) $product->delete();
 
         return redirect()->back();
+    }
+
+    protected  function syncAttributes($attributes, $idProduct){
+        if(!empty($attributes)){
+            $datas = [];
+            \DB::table('products_attributes')->where('pa_product_id',$idProduct)->delete();
+            foreach ($attributes as $key => $val)
+            {
+                $datas = [
+                    'pa_product_id' => $idProduct,
+                    'pa_attribute_id' => $val
+                ];
+                if(!empty($datas)){
+                    \DB::table('products_attributes')->insert($datas);
+                }
+            }
+        }
     }
 }

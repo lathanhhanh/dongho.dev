@@ -83,6 +83,27 @@
 
                         <div class="card card-primary">
                             <div class="card-header">
+                                <h3 class="card-title">Thông số khác</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="content">Thuộc tính</label>
+                                    @foreach($attributes as $atb)
+                                        <div class="checkbox">
+                                            <label>
+                                                <input
+                                                    type="checkbox" name="attribute[]" {{ in_array($atb->id, $attributeOld) ? "checked" : '' }} value="{{ $atb->id }}"> {{ $atb->atb_name }}
+                                            </label>
+
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+
+                        <div class="card card-primary">
+                            <div class="card-header">
                                 <h3 class="card-title">Nội dung</h3>
                             </div>
                             <div class="card-body">

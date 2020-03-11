@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b3897c3f-81fe-4eef-9504-0f31bce577fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAttributeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminAttributeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Attribute.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Attribute.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/AdminProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,20 +129,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public/frontend/css" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages\home" />
-      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages" />
-      <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\frontend\css" />
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\image" />
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\admin" />
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\frontend\plugins" />
       <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\frontend\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages\home" />
+      <recent name="D:\xampp\htdocs\laravel\dongho.dev\resources\views\frontend\pages" />
+      <recent name="D:\xampp\htdocs\laravel\dongho.dev\public\images" />
     </key>
   </component>
   <component name="RunManager">
@@ -196,7 +197,10 @@
       <workItem from="1583725372393" duration="3184000" />
       <workItem from="1583738736818" duration="3735000" />
       <workItem from="1583742525989" duration="3171000" />
-      <workItem from="1583756181099" duration="7699000" />
+      <workItem from="1583756181099" duration="7773000" />
+      <workItem from="1583827030036" duration="5844000" />
+      <workItem from="1583847775918" duration="2239000" />
+      <workItem from="1583932479641" duration="5266000" />
     </task>
     <servers />
   </component>
@@ -216,10 +220,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="517" y="296" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1583676002868" />
-    <state x="186" y="10" key="SettingsEditor" timestamp="1581838862397">
+    <state x="186" y="10" key="SettingsEditor" timestamp="1583933290339">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1581838862397" />
+    <state x="186" y="10" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1583933290339" />
     <state x="338" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583728454433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
