@@ -13,8 +13,10 @@ class AddMutipleColumnAttributeInTableProducts extends Migration
      */
     public function up()
     {
-        Schema::table('table_products', function (Blueprint $table) {
-            //
+        Schema::table('products', function (Blueprint $table) {
+            $table->tinyInteger('pro_country')->default(0)->after('created_at');
+            $table->string('pro_energy')->nullable()->after('created_at');
+            $table->string('pro_resistant')->nullable()->after('created_at');
         });
     }
 
@@ -25,8 +27,8 @@ class AddMutipleColumnAttributeInTableProducts extends Migration
      */
     public function down()
     {
-        Schema::table('table_products', function (Blueprint $table) {
-            //
+        Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn(['pro_country','pro_resistant','pro_energy']);
         });
     }
 }

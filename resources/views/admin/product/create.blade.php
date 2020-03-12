@@ -91,7 +91,7 @@
                                                 @foreach($attribute as $item)
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="checkbox" class="form-check-input" name="attributes[]" value="{{ $item['id'] }}"> {{ $item['atb_name'] }}
+                                                            <input type="checkbox" class="form-check-input" name="attribute[]" value="{{ $item['id'] }}"> {{ $item['atb_name'] }}
                                                         </label>
                                                     </div>
                                                 @endforeach
@@ -103,11 +103,11 @@
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label for="content">Xuất xứ</label>
-                                        <select name="" class="form-control" >
-                                            <option>Anh</option>
-                                            <option>Mỹ</option>
-                                            <option>Thuỵ Sỹ</option>
-                                            <option>Trung Quốc</option>
+                                        <select name="pro_country" class="form-control" >
+                                            <option value="1">Anh</option>
+                                            <option value="2">Mỹ</option>
+                                            <option value="3">Thuỵ Sỹ</option>
+                                            <option value="4">Trung Quốc</option>
                                         </select>
                                         @if($errors->first('pro_category_id'))
                                             <span class="text-danger">{{ $errors->first('pro_category_id') }}</span>
@@ -115,11 +115,11 @@
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="content">Năng lượng</label>
-                                        <input type="text" name="" class="form-control" placeholder="Năng lượng">
+                                        <input type="text" name="pro_energy" class="form-control" placeholder="Năng lượng">
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="content">Độ chịu nước</label>
-                                        <input type="text" name="" class="form-control" placeholder="Độ chịu nước">
+                                        <input type="text" name="pro_resistant" class="form-control" placeholder="Độ chịu nước">
                                     </div>
                                 </div>
                             </div>

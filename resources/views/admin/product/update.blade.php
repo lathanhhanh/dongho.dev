@@ -95,7 +95,7 @@
                                                 @foreach($attribute as $item)
                                                     <div class="form-check">
                                                         <label class="form-check-label">
-                                                            <input type="checkbox" class="form-check-input" name="attributes[]" {{ in_array($item['id'], $attributeOld) ? "checked" : '' }} value="{{ $item['id'] }}"> {{ $item['atb_name'] }}
+                                                            <input type="checkbox" class="form-check-input" name="attribute[]" {{ in_array($item['id'], $attributeOld) ? "checked" : '' }} value="{{ $item['id'] }}"> {{ $item['atb_name'] }}
                                                         </label>
                                                     </div>
                                                 @endforeach
@@ -107,23 +107,23 @@
                                 <div class="row">
                                     <div class="form-group col-sm-3">
                                         <label for="content">Xuất xứ</label>
-                                        <select name="" class="form-control" >
-                                            <option>Anh</option>
-                                            <option>Mỹ</option>
-                                            <option>Thuỵ Sỹ</option>
-                                            <option>Trung Quốc</option>
+                                        <select name="pro_country" class="form-control" >
+                                            <option value="1" {{ ($product->pro_country ?? '' ) == 1 ? "selected='selected'" : "" }}>Anh</option>
+                                            <option value="2" {{ ($product->pro_country ?? '' ) == 2 ? "selected='selected'" : "" }}>Mỹ</option>
+                                            <option value="3" {{ ($product->pro_country ?? '' ) == 3 ? "selected='selected'" : "" }}>Thuỵ Sỹ</option>
+                                            <option value="4" {{ ($product->pro_country ?? '' ) == 4 ? "selected='selected'" : "" }}>Trung Quốc</option>
                                         </select>
-                                        @if($errors->first('pro_category_id'))
-                                            <span class="text-danger">{{ $errors->first('pro_category_id') }}</span>
+                                        @if($errors->first('pro_country'))
+                                            <span class="text-danger">{{ $errors->first('pro_country') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="content">Năng lượng</label>
-                                        <input type="text" name="" class="form-control" placeholder="Năng lượng">
+                                        <input type="text" name="pro_energy" class="form-control" value="{{ $product->pro_energy }}">
                                     </div>
                                     <div class="form-group col-sm-3">
                                         <label for="content">Độ chịu nước</label>
-                                        <input type="text" name="" class="form-control" placeholder="Độ chịu nước">
+                                        <input type="text" name="pro_resistant" class="form-control" value="{{ $product->pro_resistant }}">
                                     </div>
                                 </div>
                             </div>
