@@ -7,18 +7,28 @@ use App\Models\Attribute;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class CategoryController extends Controller
 {
-    public function index()
+    public function getCategory(Request $request, $slug)
     {
         $attributes = $this->syncAttributeGroup();
-        $products = Product::where('pro_active', 1)
-            ->orderByDesc('id')
-            ->get();
-        $viewData = [
-           'attributes' => $attributes,
-            'products' => $products
-        ];
+        $arraySlug = explode('-', $slug);
+        $id = array_pop($arraySlug);
+
+        if($id)
+        {
+            $products = Product::where([
+                'pro_active' => 1,
+                'pro_category_id' => $id
+            ])->orderByDesc('id')
+                ->get();
+
+
+            $viewData = [
+                'products' => $products,
+                'attributes' => $attributes
+            ];
+        }
         return view('frontend.pages.product.index', $viewData);
     }
 

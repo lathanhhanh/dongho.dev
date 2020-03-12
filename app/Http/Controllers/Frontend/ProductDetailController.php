@@ -15,7 +15,7 @@ class ProductDetailController extends Controller
 
         if($id)
         {
-            $product = Product::findOrFail($id);
+            $product = Product::with('category:id,c_name,c_slug')->findOrFail($id);
 
             $viewData = [
                 'product' => $product

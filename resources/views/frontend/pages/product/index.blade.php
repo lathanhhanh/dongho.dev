@@ -264,9 +264,9 @@
                     <script src="https://www.dangquangwatch.vn/view/Js/mucluc.js"></script>
                     <div class="cb h5"></div>
                     <div class="group">
-{{--                        @for($i=1;$i <= 17; $i++)--}}
-{{--                            @include('frontend.components.product_item')--}}
-{{--                        @endfor--}}
+                        @foreach($products as $product)
+                            @include('frontend.components.product_item', ['product' =>$product ])
+                        @endforeach
                     </div>
                     <nav class="text-center" style="width:100%;text-align:center;padding:30px 0;">
                         <span   class="paging_div"><span class="span_select_class" rel="nofollow" >&nbsp;1&nbsp;</span>&nbsp;<span class="span_a_class">&nbsp;<a href="/sp/dong-ho-thuy-sy.html?&page=2" rel="nofollow" >2</a>&nbsp;</span>&nbsp;<span class="span_a_class">&nbsp;<a href="/sp/dong-ho-thuy-sy.html?&page=3" rel="nofollow" >3</a>&nbsp;</span>&nbsp;<span class="span_a_class">&nbsp;<a href="/sp/dong-ho-thuy-sy.html?&page=4" class="paging_link_class"><img  class="paging_link_class" src="https://www.dangquangwatch.vn/lib/paging/next.gif" title="Next" border="0"></a>&nbsp;</span>&nbsp;<span class="span_a_class">&nbsp;<a href="/sp/dong-ho-thuy-sy.html?&page=142" class="paging_link_class"><img  class="paging_link_class" src="https://www.dangquangwatch.vn/lib/paging/last.gif" title="Last" border="0"></a>&nbsp;</span></span>

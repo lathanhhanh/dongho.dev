@@ -80,38 +80,25 @@
                                 <div class="infomation">
                                     <h2 class="title">Thông số kỹ thuật</h2>
                                     <div class="group">
-
+                                        <div class="item">
+                                            <p class="text1">Danh mục:</p>
+                                            <h3 class="text2">
+                                                @if (isset($product->category->c_name))
+                                                    <a href="{{ route('get.category.list', $product->category->c_slug).'-'.$product->pro_category_id }}">{{ $product->category->c_name }}</a>
+                                                @endif
+                                            </h3>
+                                        </div>
                                         <div class="item">
                                             <p class="text1">Xuất xứ:</p>
-                                            <h3 class="text2"> Áo</h3>
-                                        </div>
-                                        <div class="item">
-                                            <p class="text1">Kiểu dáng:</p>
-                                            <h2 class="text2">Đồng hồ Nam</h2>
-                                        </div>
-                                        <div class="item">
-                                            <p class="text1">Năng lượng:</p>
-                                            <h3 class="text2">Automatic ( cơ tự động )</h3>
+                                            <h3 class="text2">{{ $product->getConutry($product->pro_country) }}</h3>
                                         </div>
                                         <div class="item">
                                             <p class="text1">Độ chịu nước:</p>
-                                            <h3 class="text2">5 ATM</h3>
+                                            <h2 class="text2">{{ $product->pro_resistant }}</h2>
                                         </div>
                                         <div class="item">
-                                            <p class="text1">Chất liệu mặt:</p>
-                                            <h3 class="text2">Sapphire</h3>
-                                        </div>
-                                        <div class="item">
-                                            <p class="text1">Đường kính mặt:</p>
-                                            <h3 class="text2">40 mm</h3>
-                                        </div>
-                                        <div class="item">
-                                            <p class="text1">Độ dầy:</p>
-                                            <h3 class="text2"></h3>
-                                        </div>
-                                        <div class="item">
-                                            <p class="text1">Chất liệu dây:</p>
-                                            <p class="text2">Stainless Steel</p>
+                                            <p class="text1">Năng lượng:</p>
+                                            <h3 class="text2">{{ $product->pro_energy }}</h3>
                                         </div>
                                     </div>
                                 </div>

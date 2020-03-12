@@ -18,6 +18,7 @@
 Route::group(['namespace' => 'Frontend'], function () {
     Route::get('','HomeController@index')->name('get.home');
     Route::get('san-pham','ProductController@index')->name('get.product.list');
+    Route::get('danh-muc/{slug}','CategoryController@getCategory')->name('get.category.list');
     Route::get('san-pham/{slug}','ProductDetailController@getProductDetail')->name('get.product.detail');
 
 });
