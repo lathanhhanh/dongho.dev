@@ -32,6 +32,7 @@
                         <th>#</th>
                         <th >Hình ảnh</th>
                         <th>Tên sản phẩm</th>
+                        <th>Danh mục</th>
                         <th>Giá</th>
                         <th>Hot</th>
                         <th>Trạng thái</th>
@@ -46,7 +47,20 @@
                             <td>{{ $product->id }}</td>
                             <td><img src="{{ pare_url_file($product->pro_avatar) }}" height="100px" width="100px"></td>
                             <td>{{ $product->pro_name }}</td>
-                            <td>{{ $product->pro_price }}</td>
+                            <td>
+                                <span class="badge badge-success">{{ $product->category->c_name ?? "[N/A]" }}</span>
+                            </td>
+                            <td>
+                                @if ($product->pro_sale)
+                                    <span class="text-danger" style="text-decoration: line-through">{{ number_format($product->pro_price, 0, ',', '.') }} vnđ</span></br>
+                                    @php
+                                        $price = ((100 - $product->pro_sale) * $product->pro_price) /100;
+                                    @endphp
+                                    <span class="text-success">{{ number_format($price, 0, ',', '.') }} vnđ</span></br>
+                                @else
+                                    <span class="text-success">{{ number_format($product->pro_price, 0, ',', '.') }} vnđ</span></br>
+                                @endif
+                            </td>
                             <td>
                                 @if($product->pro_hot == 1)
                                     <a href="{{ route('admin.product.hot', $product->id) }}" class="badge badge-info">Hot</a>

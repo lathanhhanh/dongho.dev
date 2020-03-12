@@ -15,7 +15,7 @@ class AdminProductController extends Controller
 {
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::with('category:id,c_name')->paginate(10);
         $viewData = [
           'products' => $products
         ];
@@ -25,9 +25,9 @@ class AdminProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        $attributes = Attribute::orderByDesc('atb_type')->get();
+        $attributes = $this->syncAttributeGroup();
         $attributeOld = [];
-        return view('admin.product.create', compact('categories', 'attributes', $attributeOld));
+        return view('admin.product.create', compact('categories', 'attributes', 'attributeOld'));
     }
 
     public function store(AdminRequestProduct $request)
@@ -72,7 +72,7 @@ class AdminProductController extends Controller
     {
         $product = Product::find($id);
         $categories = Category::all();
-        $attributes = Attribute::orderByDesc('atb_type')->get();
+        $attributes = $this->syncAttributeGroup();
 
         $attributeOld = \DB::table('products_attributes')
             ->where('pa_product_id', $id)
@@ -134,5 +134,16 @@ class AdminProductController extends Controller
                 }
             }
         }
+    }
+    public function syncAttributeGroup()
+    {
+        $attributes = Attribute::get();
+        $groupAttribute = [];
+        foreach ($attributes as $key => $attribute)
+        {
+            $key = $attribute->gettype($attribute->atb_type)['name'];
+            $groupAttribute[$key][] = $attribute->toArray();
+        }
+        return $groupAttribute;
     }
 }

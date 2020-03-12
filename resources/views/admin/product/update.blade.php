@@ -24,7 +24,7 @@
                     <!-- left column -->
                     <div class="col-md-8">
                         <!-- general form elements -->
-                        <div class="card card-primary">
+                        <div class="card card-dark">
                             <div class="card-header">
                                 <h3 class="card-title">Thông tin cơ bản</h3>
                             </div>
@@ -81,28 +81,56 @@
                         </div>
                         <!-- /.card -->
 
-                        <div class="card card-primary">
+                        <div class="card card-dark">
                             <div class="card-header">
                                 <h3 class="card-title">Thông số khác</h3>
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="content">Thuộc tính</label>
-                                    @foreach($attributes as $atb)
-                                        <div class="checkbox">
-                                            <label>
-                                                <input
-                                                    type="checkbox" name="attribute[]" {{ in_array($atb->id, $attributeOld) ? "checked" : '' }} value="{{ $atb->id }}"> {{ $atb->atb_name }}
-                                            </label>
-
-                                        </div>
-                                    @endforeach
+                                    <label for="content">Thuộc tính</label><hr>
+                                    <div class="row">
+                                        @foreach($attributes as $key => $attribute)
+                                            <div class="form-group col-sm-3">
+                                                <h4>{{ $key }}</h4><hr>
+                                                @foreach($attribute as $item)
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input" name="attributes[]" {{ in_array($item['id'], $attributeOld) ? "checked" : '' }} value="{{ $item['id'] }}"> {{ $item['atb_name'] }}
+                                                        </label>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="form-group col-sm-3">
+                                        <label for="content">Xuất xứ</label>
+                                        <select name="" class="form-control" >
+                                            <option>Anh</option>
+                                            <option>Mỹ</option>
+                                            <option>Thuỵ Sỹ</option>
+                                            <option>Trung Quốc</option>
+                                        </select>
+                                        @if($errors->first('pro_category_id'))
+                                            <span class="text-danger">{{ $errors->first('pro_category_id') }}</span>
+                                        @endif
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label for="content">Năng lượng</label>
+                                        <input type="text" name="" class="form-control" placeholder="Năng lượng">
+                                    </div>
+                                    <div class="form-group col-sm-3">
+                                        <label for="content">Độ chịu nước</label>
+                                        <input type="text" name="" class="form-control" placeholder="Độ chịu nước">
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.card-body -->
                         </div>
 
-                        <div class="card card-primary">
+                        <div class="card card-dark">
                             <div class="card-header">
                                 <h3 class="card-title">Nội dung</h3>
                             </div>
@@ -124,7 +152,7 @@
                     <!-- right column -->
                     <div class="col-md-4">
                         <!-- general form elements disabled -->
-                        <div class="card card-primary">
+                        <div class="card card-dark">
                             <div class="card-header">
                                 <h3 class="card-title">Ảnh sản phẩm</h3>
                             </div>
@@ -132,7 +160,7 @@
                             <div class="card-body block-images">
                                 <img src="https://scontent-hkg3-2.xx.fbcdn.net/v/t1.0-9/82881993_2531032927153352_2689820468524875776_n.jpg?_nc_cat=111&_nc_ohc=fc3mkkPsA1UAX_EIzMe&_nc_ht=scontent-hkg3-2.xx&oh=00b494e941448c3a891c7f221c754331&oe=5EB5AFBB" style="height: 200px; width: 200px;" alt="" class="img-thumbnail">
                                 <div class="form-group mt-3">
-                                    <a style="position: relative" class="btn btn-primary" href="javascript:;">Chọn ảnh..
+                                    <a style="position: relative" class="btn btn-dark" href="javascript:;">Chọn ảnh..
                                         <input style="position: absolute;z-index: 2;top: 0;left: 0;filter: alpha(opacity=0);-ms-filter: &quot;progid:DXImageTransform.Microsoft.Alpha(Opacity=0)&quot;;opacity: 0;background-color: transparent;color: transparent;" type="file" class="js-upload" name="pro_avatar">
                                     </a> <span class="badge badge-info" id="upload-file-info"></span>
                                 </div>
@@ -145,8 +173,8 @@
                 </div>
                 <div class="col-ms-12 card p-3">
                     <div class="small-box-footer text-center">
-                        <a href="{{ route('admin.product.index') }}" class="btn btn-secondary"> <i class="fa fa-arrow-left"></i>Quay lại</a>
-                        <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i>Cập nhật</button>
+                        <a href="{{ route('admin.product.index') }}" class="btn btn-danger"> <i class="fa fa-arrow-left"></i> Quay lại</a>
+                        <button type="submit" class="btn btn-success"> <i class="fa fa-save"></i> Cập nhật</button>
                     </div>
                 </div>
             </form>
